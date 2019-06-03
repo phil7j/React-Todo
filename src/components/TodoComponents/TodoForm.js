@@ -1,12 +1,12 @@
 import React from 'react';
-
+// test
 function TodoForm(props){
 
     return (
-        <form name="task" onSubmit={props.handleChanges}>
-            <input  />
-            <input type='submit' value='Add' />
-            <button>Clear</button>
+        <form onSubmit={props.addTask}>
+            <input name="task" onChange={props.handleChanges} value={props.task}/>
+            <button type='submit'>Add</button>
+            <button onClick={props.clearCompleted}>Clear</button>
         </form>
     )
 }
